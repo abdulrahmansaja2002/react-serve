@@ -13,9 +13,10 @@ forms.txt
 links.txt
 
 # frontend build files
-build/
-dist/
-web/dist/
+/build/
+/dist/
+/web/dist/*
+!/web/dist/index.html
 
 # data
 data/
