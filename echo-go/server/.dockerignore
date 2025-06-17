@@ -1,0 +1,10 @@
+# env files
+.env
+
+# docker-compose files
+docker-compose*
+
+# frontend build files
+build/
+dist/
+web/dist/

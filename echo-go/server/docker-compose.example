@@ -1,0 +1,29 @@
+# kanal-be
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: kanal-be:latest
+    # image: registry-pd.dikti.go.id/pddiktifp/be-cron:latest
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+    logging:
+      options:
+        max-size: 50m
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 40s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    tty: true
+    ports:
+      - "8888:3131"
+    restart: always
+    volumes:
+      - .env:/app/.env

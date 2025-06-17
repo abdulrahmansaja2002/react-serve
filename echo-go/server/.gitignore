@@ -1,0 +1,21 @@
+# env
+.env
+
+tmp/
+temp/
+
+firebase_credentials.json
+
+.air.toml
+application.exe
+app.exe
+forms.txt
+links.txt
+
+# frontend build files
+build/
+dist/
+web/dist/
+
+# data
+data/
